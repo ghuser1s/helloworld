@@ -29,7 +29,7 @@ AuthorizedKeysCommand /usr/local/bin/fetchsshkeysfromldap.sh
 AuthorizedKeysCommandUser nobody
 
 6.
-authconfig --enablesssd --enablesssdauth --ldapserver="x.x.x.x" --ldapbasedn="dc=xx,dc=xx" --enableldaptls --enablemkhomedir --update
+authconfig --enablesssd --enablesssdauth --enablemkhomedir --update
 
 7.
 cat <<EOF > /etc/sssd/sssd.conf
