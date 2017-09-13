@@ -66,7 +66,7 @@ cache_credentials = true
 chmod 600 /etc/sssd/sssd.conf
 
 --------------------------------------
-9.	restart sssd,sshd
+9.	restart sssd sshd
 --------------------------------------
 systemctl restart sssd
 systemctl restart sshd
