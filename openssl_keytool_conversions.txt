@@ -1,0 +1,13 @@
+
+
+# 1. you want to convert an openssl certificate into pkcs12 format
+#
+# ca-chain.cert.pem consists of first the intermediate then the root in that order
+#
+openssl pkcs12 -export -out out.pkcs12 -in in.cert.pem -inkey in.key.pem -name "alias" -chain -CAfile ca-chain.cert.pem
+
+
+# 2. you want to convert the pkcs12 into keytool's jks format
+#
+keytool -importkeystore -srckeystore in.pkcs12 -srcstoretype pkcs12 -srcalias "alias" -destkeystore out.jks -deststoretype jks -destalias "alias"
+
